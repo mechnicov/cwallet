@@ -1,5 +1,3 @@
-require 'json'
-
 module Wallet
   class GetUtxos
     class << self
