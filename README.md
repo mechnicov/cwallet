@@ -14,20 +14,20 @@ To see all available options
 $ docker-compose exec cwallet ruby cwallet.rb --help
 ```
 
-To generate key to `.key` file
+To generate new wallet
 
 ```
-$ docker-compose exec cwallet ruby cwallet.rb --key
+$ docker-compose exec cwallet ruby cwallet.rb --generate
 ```
 
 To see wallet balance
 
 ```
-$ docker-compose exec cwallet ruby cwallet.rb --balance
+$ docker-compose exec cwallet ruby cwallet.rb --balance=ADDRESS
 ```
 
 To send sum to some address
 
 ```
-$ docker-compose exec cwallet ruby cwallet.rb --sum=SUM --address=ADDRESS
+$ docker-compose exec cwallet ruby cwallet.rb --sum=SUM --from=ADDRESS --to=ADDRESS
 ```
