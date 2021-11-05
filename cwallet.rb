@@ -1,6 +1,6 @@
 require 'optparse'
 
-Dir[File.join(__dir__, 'lib', '**', '*.rb')].each { |f| require f }
+require_relative 'lib/wallet'
 
 ARGV << '--help' if ARGV.empty?
 
@@ -22,7 +22,17 @@ OptionParser.new do |opt|
     return
   end
 
-  opt.on('--balance','show balance') { return puts 'Balance is...' }
+  opt.on('--balance=ADDRESS', 'show wallet balance', String) do |address|
+    balance = Wallet::GetBalance.(address)
+    puts <<~BALANCE
+      Wallet '#{address}' balance:
+      Total: #{balance[:total]}฿T
+      Confirmed: #{balance[:confirmed]}฿T
+      Unconfirmed: #{balance[:unconfirmed]}฿T
+    BALANCE
+    return
+  end
+
   opt.on('--sum=SUM', 'send SUM', Float)
   opt.on('--address=ADDRESS', 'send to ADDRESS')
 end.parse!(into: options = {})

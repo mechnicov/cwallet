@@ -1,5 +1,3 @@
-require 'bitcoin'
-
 module Wallet
   class GenerateWallet
     class << self
