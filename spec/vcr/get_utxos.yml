@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://blockstream.info/testnet/api/address/msJbhJB1x5TSudZtRAXBD5mf9rPX3MT9TA/utxo
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Fri, 05 Nov 2021 10:26:03 GMT
+      Content-Type:
+      - application/json
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - public, max-age=10
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - x-total-results
+      Via:
+      - 1.1 google
+      Alt-Svc:
+      - clear
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"txid":"37ba43ef4ca87c33b961ad6d147f466b72131794b853cb8174bc42f33db78300","vout":0,"status":{"confirmed":true,"block_height":2102589,"block_hash":"000000000000002e884a43f0a6a51f26736237c0ebdd194e79023971379c26b6","block_time":1636045314},"value":10000},{"txid":"249bb4ed00a06f70fb6713504612547e4de87d4ec0216974fc3e5f107c67b2cb","vout":0,"status":{"confirmed":true,"block_height":2102589,"block_hash":"000000000000002e884a43f0a6a51f26736237c0ebdd194e79023971379c26b6","block_time":1636045314},"value":10000},{"txid":"2c20bf208cc62f7c8ef493432739bbf9de0d7e5fa91209fea3c10b468d9bf7a3","vout":0,"status":{"confirmed":true,"block_height":2102724,"block_hash":"000000000000000b30e4ade8649c422d0f26df0ac1b972829ec291b6e9a71e8b","block_time":1636107775},"value":130100},{"txid":"10bdb27a5b4d4a62cd167881d83bdfa82678ab5cb205734ff5308ed291db2fd8","vout":0,"status":{"confirmed":true,"block_height":2102558,"block_hash":"00000000594a742ec74688524c297417b8a1565cd2d5a107aaeb3d26e761a13f","block_time":1636032310},"value":100000},{"txid":"4abfb1a01f984de644583f1eb47d63ac9d09c30828e271fca3895cd5be2c2b36","vout":0,"status":{"confirmed":true,"block_height":2102589,"block_hash":"000000000000002e884a43f0a6a51f26736237c0ebdd194e79023971379c26b6","block_time":1636045314},"value":10000},{"txid":"95b07495fe7c73580221094a937af0a8f8456c2183c2cf620061fc204efc0d5f","vout":0,"status":{"confirmed":true,"block_height":2102591,"block_hash":"0000000000000010928d9854fd9f46f0735c982128b2435fb45e380246ff0042","block_time":1636046657},"value":100}]'
+  recorded_at: Fri, 05 Nov 2021 10:26:03 GMT
+recorded_with: VCR 6.0.0
