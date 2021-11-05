@@ -6,3 +6,4 @@ ruby '3.0.1'
 
 gem 'bitcoin-ruby', '~> 0.0.20'
 gem 'httparty', '~> 0.20.0'
+gem 'rspec', '~> 3.10'
