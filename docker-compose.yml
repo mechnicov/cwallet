@@ -6,3 +6,6 @@ services:
     command: tail -f /dev/null
     volumes:
       - .:/cwallet
+    restart: always
+    stdin_open: true
+    tty: true
